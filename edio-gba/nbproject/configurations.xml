@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>source/disk.c</itemPath>
+      <itemPath>source/disk.h</itemPath>
+      <itemPath>source/everdrive.c</itemPath>
+      <itemPath>source/everdrive.h</itemPath>
+      <itemPath>source/font.c</itemPath>
+      <itemPath>source/main.c</itemPath>
+      <itemPath>source/sys.c</itemPath>
+      <itemPath>source/sys.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>mem.ld</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>source</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>gcc1|WinAVR</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE}</buildCommand>
+          <cleanCommand>${MAKE} clean</cleanCommand>
+          <executablePath>emu.bat</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>E:/MDkit/include</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+    <conf name="Release" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>devkitPro|MinGW</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE}</buildCommand>
+          <cleanCommand>${MAKE} clean</cleanCommand>
+          <executablePath>usb.bat</executablePath>
+          <cTool>
+            <developmentMode>5</developmentMode>
+          </cTool>
+          <ccTool>
+            <developmentMode>5</developmentMode>
+          </ccTool>
+          <fortranCompilerTool>
+            <developmentMode>5</developmentMode>
+          </fortranCompilerTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
